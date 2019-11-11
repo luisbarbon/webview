@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:wiki_browser/home.dart' as home;
-import 'package:http/http.dart' as http;
 
 const request = "http://www.sislipa.pedido.la";
 
@@ -11,11 +10,6 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 class _SplashScreenState extends State<SplashScreen> {
-
-  _getData() async {
-    http.Response response;
-    return response.body;
-  }
 
   @override
   void initState() {
