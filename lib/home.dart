@@ -1,22 +1,24 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Home());
 
-class MyApp extends StatelessWidget {
+class Home extends StatelessWidget {
+  WebViewController _controller;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
-        child: WebviewScaffold(
-          url: 'http://sislimpa.pedido.la',
-          hidden: true,
-        ),
+    return Padding(
+      padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+      child: Scaffold(
+        body: WebView(
+          initialUrl: 'http://sislimpa.pedido.la',
+          javascriptMode: JavascriptMode.unrestricted,
+          onWebViewCreated: (WebViewController c) {
+            _controller = c;
+          }),
       ),
     );
   }
 }
-
