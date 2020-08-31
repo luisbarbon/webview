@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:wiki_browser/home.dart' as home;
+import 'home.dart' as home;
 
 class SplashScreen extends StatefulWidget {
   @override

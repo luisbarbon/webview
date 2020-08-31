@@ -8,8 +8,7 @@ class Home extends StatelessWidget {
   WebViewController _controller;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+    return SafeArea(
       child: Scaffold(
         body: WebView(
           initialUrl: 'http://sislimpa.pedido.la',
